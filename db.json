@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "name": " kalaliya arun das bairagi",
+      "email": "e-learning.typescript@iflair.com",
+      "age": 45,
+      "number": 67545,
+      "id": "2"
+    },
+    {
+      "name": "iflair ahemdabad",
+      "email": "vdfv@gmail.com",
+      "age": 123,
+      "number": 1234567,
+      "id": "3"
+    },
+    {
+      "id": "9f4b",
+      "name": "deepak santosh",
+      "email": "deepaksantosh@gmail.com",
+      "age": 21,
+      "number": 2323245
+    },
+    {
+      "id": "64c2",
+      "name": "testing",
+      "email": "test@gmail.com",
+      "age": 12,
+      "number": 21212121
+    }
+  ]
+}

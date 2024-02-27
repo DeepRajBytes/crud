@@ -1,0 +1,72 @@
+<div class="container mt-2">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Add user</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">User list</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+        <div class="row d-flex mt-2">
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput">Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Name" formControlName="name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput2">Number</label>
+            <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Enter Number" formControlName="number">
+          </div>
+        </div>
+        <div class="row d-flex mt-3">
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput">Email</label>
+            <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Enter Email" formControlName="email">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="formGroupExampleInput2" name="age">Age</label>
+            <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Enter Age" formControlName="age">
+          </div>
+        </div>
+        <div class="row d-flex mt-3">
+          <button type="submit" class="btn btn-success">Add</button>
+          <button type="reset" class="btn btn-success mt-2">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <table class="table">
+        <thead>
+          <tr>
+            <!-- <th scope="col">ID</th> -->
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Age</th>
+            <th scope="col">Number</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of users">
+            <!-- <td>{{item.id}}</td> -->
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.number}}</td>
+            <td>
+              <button class="btn btn-danger m-1" (click)="deleteuserbyid(item.id)">Delete</button>
+              <button class="btn btn-success m-1" (click)="getuserbyid(item.id)">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
